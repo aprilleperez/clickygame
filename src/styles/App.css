@@ -11,8 +11,13 @@
 .card {
   width: 200px;
   height: 200px;
-  object-fit: scale-down;
+  object-fit: cover;
+  margin: 5px;
 }
+
+
+
+
 
 /* .App {
   text-align: center;
