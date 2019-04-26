@@ -1,10 +1,11 @@
 import React from "react";
+import "../styles/App.css";
 ////////////////////////////////////////////////////////////
 
 
 function Jumbo() {
     return (
-            <div className="jumbotron">
+            <div className="jumbotron cstmJumbo">
                 <h5>Instructions:</h5> 
                 <p>This is a memory game based on 12 picture of the Sailor scouts below.</p>
                 <p>Click each picture ONLY ONCE to get a point!</p>

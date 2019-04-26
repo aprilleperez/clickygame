@@ -7,7 +7,8 @@ import scouts from "../sailorscouts.json";
 
 function CardContainer() {
     return (
-        <div class="cardContainer">
+        <div className="cardContainer">
+        {/* iterates over each scout in sailorscouts.js file to generate card */}
             {scouts.map((scout, i) => {
                 return (
                     <Card
@@ -22,20 +23,3 @@ function CardContainer() {
 
 ////////////////////////////////////////////////////////////
 export default CardContainer;
-
-
-
-
-
-     {/* <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card /> */}
