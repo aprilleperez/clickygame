@@ -1,32 +1,16 @@
 import React from "react";
 ////////////////////////////////////////////////////////////
 
-const styles = {
-    // card: {
-    //   background: "#e8eaf6"
-    // },
-    // heading: {
-    //   background: "#9a74db",
-    //   minHeight: 50,
-    //   lineHeight: 3.5,
-    //   fontSize: "1.2rem",
-    //   color: "white",
-    //   padding: "0 20px"
-    // }
-};
 
 function Jumbo() {
     return (
-        <div class="container">
             <div className="jumbotron">
-                <h1>Hello, world!</h1>
-                <p>I'm a jumbotron!</p>
-                <p>
-                    <button className="btn btn-primary btn-lg">Learn more</button>
-                </p>
+                <h5>Instructions:</h5> 
+                <p>This is a memory game based on the 12 picture of Sailor scouts below.</p>
+                <p>Click each picture ONLY ONCE to get a point!</p>
+                <p>But be careful, after each click the pictures shuffle their position on the screen, so you'll have to remember which one you already clicked.</p>
+                {/* <h1 className="text-center">Score: 0  |  Top Score: 0</h1> */}
             </div>
-
-        </div>
     );
 }
 

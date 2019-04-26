@@ -1,20 +1,22 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Jumbo from "./components/Jumbo";
-// import Card from "./components/Card"; NEED TO MAKE
+import CardContainer from "./components/CardContainer";
+////////////////////////////////////////////////////////////
+
 
 function App() {
   return (
     <div>
       <Navbar />
-      <Jumbo /> 
-      {/* <Card /> NEED TO MAKE ALL
-      <Card />
-      <Card /> */}
+      <Jumbo />
+      <CardContainer />
     </div>
   );
 }
 
+
+////////////////////////////////////////////////////////////
 export default App;
 
 

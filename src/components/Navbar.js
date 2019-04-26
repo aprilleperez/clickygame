@@ -1,26 +1,17 @@
 import React from "react";
+import '../styles/App.css';
 ////////////////////////////////////////////////////////////
 
-const styles = {
-  card: {
-    background: "#e8eaf6"
-  },
-  heading: {
-    background: "#9a74db",
-    minHeight: 50,
-    lineHeight: 3.5,
-    fontSize: "1.2rem",
-    color: "white",
-    padding: "0 20px"
-  }
-};
 
 function Navbar() {
-  return (
-    <div style={styles.card}>
-      <div style={styles.heading}>Home</div>
-    </div>
-  );
+    return (
+        <div className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+            <span className="navbar-brand title">Click Game</span>
+            <span className="navbar-brand score">Score: 0  |  Top Score: 0</span>
+            {/* <span className="nav-item" href="#">Instructions</span>
+            <span className="nav-item" href="#">Score: 0  |  Top Score: 0</span> */}
+        </div>
+    );
 }
 
 ////////////////////////////////////////////////////////////
