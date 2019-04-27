@@ -24,6 +24,7 @@ class CardContainer extends Component {
 
     // to reset score and shuffle at end of round
     reset = () => {
+        console.log("reset")
         this.setState({
             score: 0,
             clicked: []
@@ -48,14 +49,9 @@ class CardContainer extends Component {
         return arr;
     }
 
-    // when button clicked, shuffle the scouts
-    // buttonClicked = () => {
-    //     this.setState({ scouts: this.shuffleScouts(this.state.scouts) })
-    // }
-
+    // when scout is clicked, will track the id in the array and determine if score will be added
     handleClick = id => {
         console.log("clicked")
-
         if (this.state.clicked.indexOf(id) === -1) {
             this.addScore();
             this.setState({
@@ -67,6 +63,7 @@ class CardContainer extends Component {
             // })
             this.reset();
         }
+        console.log(this.state.clicked)
 
         this.shuffleScouts(this.state.scouts)
     }
@@ -121,3 +118,9 @@ class CardContainer extends Component {
 
 ////////////////////////////////////////////////////////////
 export default CardContainer;
+
+
+ // when button clicked, shuffle the scouts
+    // buttonClicked = () => {
+    //     this.setState({ scouts: this.shuffleScouts(this.state.scouts) })
+    // }
