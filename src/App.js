@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Jumbo from "./components/Jumbo";
+// import Navbar from "./components/Navbar";
+// import Jumbo from "./components/Jumbo";
 import CardContainer from "./components/CardContainer";
 ////////////////////////////////////////////////////////////
 
@@ -8,8 +8,8 @@ import CardContainer from "./components/CardContainer";
 function App() {
   return (
     <div>
-      <Navbar />
-      <Jumbo />
+      {/* <Navbar />
+      <Jumbo /> */}
       <CardContainer />
     </div>
   );
