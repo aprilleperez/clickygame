@@ -7,11 +7,6 @@ import "../styles/App.css";
 import scouts from "../sailorscouts.json";
 ////////////////////////////////////////////////////////////
 
-// YES-- set up state
-// set up the listeners for click
-// YES-- get click to randomize the cards
-// get click to update score
-// track clicked pic
 
 class CardContainer extends Component {
     // set base state of scouts, scores to 0, and clicked to empty array
@@ -51,20 +46,17 @@ class CardContainer extends Component {
 
     // when scout is clicked, will track the id in the array and determine if score will be added
     handleClick = id => {
-        console.log("clicked")
+        console.log("clicked" + " " + id)
         if (this.state.clicked.indexOf(id) === -1) {
             this.addScore();
             this.setState({
                 clicked: this.state.clicked.concat(id)
             });
         } else {
-            // this.setState({
-            //     score: 0
-            // })
-            this.reset();
+            this.setState({
+                score: 0
+            })
         }
-        console.log(this.state.clicked)
-
         this.shuffleScouts(this.state.scouts)
     }
 
@@ -72,15 +64,16 @@ class CardContainer extends Component {
         console.log("addScore");
         // if all have been guessed correctly
         this.setState({
-            score: this.state.score + 1
+            score: this.state.score + 1,
+            highscore: this.state.highscore + 1
         })
-        // if all images have been clicked no more than once player wins
-        if (this.state.score === 11) {
-            this.setState({
-                highscore: this.state.highscore + 1
-            })
-            this.reset();
-        }
+
+        // if (this.state.score === 11) {
+        //     this.setState({
+        //         highscore: this.state.highscore + 1
+        //     })
+        //     this.reset();
+        // }
         this.shuffleScouts(scouts);
     }
 
@@ -94,14 +87,11 @@ class CardContainer extends Component {
                     {/* iterates over each scout in sailorscouts.js file to generate card. Card will be given data from json file and set up the onClick listener */}
                     {
                         scouts.map((scout, i) => {
+                            // console.log(scout)
                             return (
                                 <Card
                                     key={i}
                                     data={scout}
-                                    id={scout.id}
-                                    // src={scout.src}
-                                    // alt={scout.alt}
-                                    buttonClicked={this.buttonClicked}
                                     handleClick={this.handleClick}
                                 />
                             )
@@ -124,3 +114,8 @@ export default CardContainer;
     // buttonClicked = () => {
     //     this.setState({ scouts: this.shuffleScouts(this.state.scouts) })
     // }
+
+     // id={scout.id}
+                                    // src={scout.src}
+                                    // alt={scout.alt}
+                                    // buttonClicked={this.buttonClicked}
