@@ -22,6 +22,7 @@ class CardContainer extends Component {
         clicked: []
     };
 
+    // to reset score and shuffle at end of round
     reset = () => {
         this.setState({
             score: 0,
@@ -35,7 +36,7 @@ class CardContainer extends Component {
         this.shuffleScouts(scouts);
     }
 
-    // shuffle scouts 
+    // shuffle scouts position
     shuffleScouts = arr => {
         var j, temp, i;
         for (i = arr.length - 1; i > 0; i--) {
@@ -48,33 +49,39 @@ class CardContainer extends Component {
     }
 
     // when button clicked, shuffle the scouts
-    buttonClicked = () => {
-        this.setState({ scouts: this.shuffleScouts(this.state.scouts) })
-    }
+    // buttonClicked = () => {
+    //     this.setState({ scouts: this.shuffleScouts(this.state.scouts) })
+    // }
 
-    handleClick = data => {
+    handleClick = id => {
         console.log("clicked")
 
-        if (this.state.clicked.indexOf(data.id) === -1) {
-            this.increment();
+        if (this.state.clicked.indexOf(id) === -1) {
+            this.addScore();
             this.setState({
-                clicked: this.state.clicked.concat(data.id)
+                clicked: this.state.clicked.concat(id)
             });
         } else {
-            this.setState({
-                score: 0
-            })
+            // this.setState({
+            //     score: 0
+            // })
+            this.reset();
         }
+
+        this.shuffleScouts(this.state.scouts)
     }
 
-    increment = () => {
-        console.log("increment");
+    addScore = () => {
+        console.log("addScore");
         // if all have been guessed correctly
         this.setState({
             score: this.state.score + 1
         })
         // if all images have been clicked no more than once player wins
         if (this.state.score === 11) {
+            this.setState({
+                highscore: this.state.highscore + 1
+            })
             this.reset();
         }
         this.shuffleScouts(scouts);
@@ -94,6 +101,9 @@ class CardContainer extends Component {
                                 <Card
                                     key={i}
                                     data={scout}
+                                    id={scout.id}
+                                    // src={scout.src}
+                                    // alt={scout.alt}
                                     buttonClicked={this.buttonClicked}
                                     handleClick={this.handleClick}
                                 />
@@ -108,37 +118,6 @@ class CardContainer extends Component {
     }
 }
 
+
 ////////////////////////////////////////////////////////////
 export default CardContainer;
-
-
- // once the user clicks an image div. Check if they have guessed correctly
-    // correct guesses won't have their id in the clicked array
-    // handleClick = id => {
-    //     console.log("clicked")
-
-    //     if (this.state.clicked.indexOf(id) === -1) {
-    //         this.increment();
-    //         this.setState({ 
-    //             clicked: this.state.clicked.concat(id) 
-    //         });
-    //     } else {
-    //         this.defeat();
-    //     }
-    //       console.log(this.state.clicked);
-    //     console.log("handleclick squares");
-    // }
-
-
-    // increment = () => {
-    //     console.log("increment");
-    //     // if all have been guessed correctly
-    //     this.setState({
-    //         score: this.state.score + 1
-    //     })
-    //     // if all images have been clicked no more than once player wins
-    //     if (this.state.score === 11) {
-    //         this.victory();
-    //     }
-    //     this.randomize(Data);
-    // }

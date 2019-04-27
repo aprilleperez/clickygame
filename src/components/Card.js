@@ -7,10 +7,11 @@ const Card = props => {
     return (
         <div id={id} >
             {/* sets up id, image link, and name from json file, and sets up listener for onClick event */}
-            <img id={id} className="card" src={image} alt={name} onClick={() => props.buttonClicked()}></img>
+            <img id={id} className="card" src={image} alt={name} onClick={() => props.handleClick()}></img>
         </div>
     );
 }
+
 
 ////////////////////////////////////////////////////////////
 export default Card;
