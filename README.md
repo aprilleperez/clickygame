@@ -1,68 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Clicky Game - Sailor Moon Edition
 
-## Available Scripts
+## Description
+This app was created purely from React, an HTML/Javascript hybrid frontend UI library that dynamically changes the UI based on components and props. The game itself presents 12 cards, the theme based off of Sailor Moon. The goal of the game is to click each of the 12 cards only once to get a top score of 12. Otherwise, a card clicked more than once will restart your current score. On each click of the cards, they will shuffle their location on the screen, so do your best to remember who you clicked!
 
-In the project directory, you can run:
+## Languages
+React, HTML, CSS, Javascript, Node
 
-### `npm start`
+## Important
+Please be sure to $npm install gh-pages, as well as confirm that the created react app includes these as dependencies: react, react-dom, react-scripts. To run this app locally, run $npm start.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Takeaways
+React is a huge upgrade and climb from pure HTML and a separated Javascript file. It was really challenging to get started and to navigate all the files that create-react-app initializes, but nonetheless this was good practice. I had a bit of an a-ha moment towards the end of finishing the MVP of understanding the relationship between child-parent components and the props that link them all together. I definitely need more practice to feel confident in it, but it was a win to come to that understanding. 

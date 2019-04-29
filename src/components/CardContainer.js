@@ -19,7 +19,6 @@ class CardContainer extends Component {
 
     // to reset score and shuffle at end of round
     reset = () => {
-        console.log("reset")
         this.setState({
             score: 0,
             clicked: []
@@ -29,7 +28,8 @@ class CardContainer extends Component {
 
     // randomize scouts on pg load
     componentDidMount() {
-        this.shuffleScouts(scouts);
+        // this.shuffleScouts(scouts);
+        this.reset();
     }
 
     // shuffle scouts position
@@ -46,7 +46,6 @@ class CardContainer extends Component {
 
     // when scout is clicked, will track the id in the array and determine if score will be added
     handleClick = id => {
-        console.log("clicked" + " " + id)
         if (this.state.clicked.indexOf(id) === -1) {
             this.addScore();
             this.setState({
@@ -61,7 +60,6 @@ class CardContainer extends Component {
     }
 
     addScore = () => {
-        console.log("addScore");
         // if all have been guessed correctly
         this.setState({
             score: this.state.score + 1,
@@ -108,14 +106,3 @@ class CardContainer extends Component {
 
 ////////////////////////////////////////////////////////////
 export default CardContainer;
-
-
- // when button clicked, shuffle the scouts
-    // buttonClicked = () => {
-    //     this.setState({ scouts: this.shuffleScouts(this.state.scouts) })
-    // }
-
-     // id={scout.id}
-                                    // src={scout.src}
-                                    // alt={scout.alt}
-                                    // buttonClicked={this.buttonClicked}
