@@ -9,5 +9,5 @@ React, HTML, CSS, Javascript, Node
 ## Important
 Please be sure to $npm install gh-pages, as well as confirm that the created react app includes these as dependencies: react, react-dom, react-scripts. To run this app locally, run $npm start.
 
-## Takeaways
-React is a huge upgrade and climb from pure HTML and a separated Javascript file. It was really challenging to get started and to navigate all the files that create-react-app initializes, but nonetheless this was good practice. I had a bit of an a-ha moment towards the end of finishing the MVP of understanding the relationship between child-parent components and the props that link them all together. I definitely need more practice to feel confident in it, but it was a win to come to that understanding. 
+## Project Link
+[Sailor Moon Clicky Game](https://aprilleperez.github.io/clickygame/)
